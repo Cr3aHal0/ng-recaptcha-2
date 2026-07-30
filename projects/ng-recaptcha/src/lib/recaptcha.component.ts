@@ -161,7 +161,7 @@ export class RecaptchaComponent implements AfterViewInit, OnDestroy {
 
   /** @internal */
   private grecaptchaReset() {
-    this.zone.runOutsideAngular(() => this.widget && this.grecaptcha?.reset(this.widget));
+    this.zone.runOutsideAngular(() => this.widget !== null && this.grecaptcha?.reset(this.widget));
   }
 
   /** @internal */
